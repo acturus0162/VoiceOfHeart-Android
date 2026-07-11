@@ -30,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.R
 import com.example.myapplication.ui.component.CommonButton
+import com.example.myapplication.ui.component.CommonTextField
 import com.example.myapplication.ui.theme.KuitColors
 import com.example.myapplication.ui.theme.KuitTheme
 import com.example.myapplication.ui.theme.MyApplicationTheme
@@ -57,54 +58,16 @@ fun LoginScreen(
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ){
-            TextField(
-                value=email,
-                onValueChange = {email=it},
-                placeholder = {
-                    Text(
-                        text="이메일",
-                        color= KuitTheme.colors.gray2,
-                        style = KuitTheme.typography.M_14
-                    )
-                },
-                singleLine = true,
-                shape= RoundedCornerShape(12.dp),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = KuitTheme.colors.white,
-                    unfocusedContainerColor = KuitTheme.colors.white,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                    cursorColor = KuitTheme.colors.main1
-                ),
-                modifier=modifier
-                    .width(345.dp)
-                    .height(50.dp)
+            CommonTextField(
+                placeHolder = "이메일",
+                textValue = email
             )
 
             Spacer(modifier= Modifier.height(12.dp))
 
-            TextField(
-                value=password,
-                onValueChange = {password=it},
-                placeholder = {
-                    Text(
-                        text="비밀번호",
-                        color= KuitTheme.colors.gray2,
-                        style = KuitTheme.typography.M_14
-                    )
-                },
-                singleLine = true,
-                shape= RoundedCornerShape(12.dp),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = KuitTheme.colors.white,
-                    unfocusedContainerColor = KuitTheme.colors.white,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                    cursorColor = KuitTheme.colors.main1
-                ),
-                modifier=modifier
-                    .width(345.dp)
-                    .height(50.dp)
+            CommonTextField(
+                placeHolder = "비밀번호",
+                textValue = password
             )
 
             Spacer(modifier= Modifier.height(12.dp))
