@@ -104,7 +104,7 @@ fun RegisterScreen1(
             )
 
             Spacer(modifier= Modifier.height(20.dp))
-            
+
             CommonTextBox(
                 des = "비밀번호 확인",
                 phd = "비밀번호 재입력",
